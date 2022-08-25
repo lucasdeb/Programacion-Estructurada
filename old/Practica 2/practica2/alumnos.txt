@@ -1,0 +1,5 @@
+1,Delfina,6
+2,Martina,3,4,6
+5,Juan,3,4,5,7
+7,Simon,3,2,1,9
+8,Marta,4,5,6,7
