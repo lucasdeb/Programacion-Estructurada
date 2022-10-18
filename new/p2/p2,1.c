@@ -10,7 +10,7 @@ struct puntos
 
 void calc(struct puntos p, struct puntos p1);
 
-void main(){
+int main(void){
 
     struct puntos p;
     struct puntos p1;

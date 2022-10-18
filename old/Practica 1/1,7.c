@@ -19,7 +19,7 @@ void main(){
 }
 
 void cargarMat(int mat[F][C]){
-    int i = 0,j = 0,e;
+    int i,j,e;
     for (i=0;i<F;i++){
         for (j=0;j<C;j++){
             printf("[%d][%d]: ",i,j);

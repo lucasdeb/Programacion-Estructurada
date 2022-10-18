@@ -18,6 +18,7 @@ void main(){
     cargarMat(mat);
     imprimirMat(mat);
     transponer(mat);
+    printf("\n");
     imprimirMat(mat);
 
     
