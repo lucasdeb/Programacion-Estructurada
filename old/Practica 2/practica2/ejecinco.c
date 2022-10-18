@@ -64,7 +64,6 @@ void cargarestruc(FILE* arch, datos arr[largo]){
 void imprimirestruc(datos arr[largo]){
     int i;
     for(i=0;arr[i].numdoc!=0;i++){
-        printf("%-10d %20s  %20s\n",arr[i].numdoc,arr[i].nombre,arr[i].pais);
-
+        printf("%-10d %20s %20s\n",arr[i].numdoc,arr[i].nombre,arr[i].pais);
     }
 }

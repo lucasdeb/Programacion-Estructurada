@@ -1,32 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 #define F 10
-#define C 10
+#define C 30
 
-void cargarMatDeArch(arch);
+void cargarMatDeArch(char nomArch[100], char mat[F][C]);
+void imprimirMat(char mat[F][C]);
 
-void main(){
-    FILE* arch;
-    arch = fopen("/Users/lucasdebarbieri/Library/CloudStorage/OneDrive-UCA/ProgramacionE/old/Practica 1/equipos.txt","r");
-    cargarMatDeArch(arch);
-    fclose(arch);
+int main(void)
+{
+    char mat[F][C] = {0};
+    char nomArch[100] = "/Users/lucasdebarbieri/Library/CloudStorage/OneDrive-UCA/ProgramacionE/old/Practica 1/equipos.txt";
+    cargarMatDeArch(nomArch, mat);
+    imprimirMat(mat);
 }
 
-void cargarMatDeArch(arch){
-    char mat[F][C],a;
-    int i=0;
-
-    if (arch!=NULL){
-        a = (char)fgets(mat,C,arch);
-        while(a!=EOF){
-            printf("%s",mat);
-            strcpy(mat[i],a);
-            i++;
-            a = (char)fgets(mat,C,arch);
-        }
-        mat[i][C]='\0';
+void imprimirMat(char mat[F][C]){
+    for (int i = 0;(i<F) && (mat[i][0]!='\0'); i++){ 
+        printf("%s", mat[i]);
     }
+}
+
+void cargarMatDeArch(char nomArch[100], char mat[F][C])
+{
+    int i=0;
+    FILE *arch = fopen(nomArch, "r");
+    
+    while(!feof(arch)){
+        if(fgets(mat[i],C,arch)!= NULL){
+            i++;
+        }
+    }
+    fclose(arch);
 }

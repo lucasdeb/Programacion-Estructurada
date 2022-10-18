@@ -4,6 +4,7 @@ void redondear(double *p);
 
 void redondear(double *p){
     double e = (*p) - (int)(*p);
+    printf("%f",e);
     if (e>=0.5){
         *p = *p + (1-e);
     }
@@ -14,6 +15,6 @@ void redondear(double *p){
 }
 
 void main(){
-    double n = 5.5;
+    double n = 5.4;
     redondear(&n);
 }
