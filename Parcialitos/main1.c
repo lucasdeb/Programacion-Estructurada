@@ -53,7 +53,7 @@ int escribirArchDesdeLista(char* nomArch, tNodo lista){
 
     while(lista!=NULL){
         auxCont = lista->content;
-        fprintf(arch,"%S,", auxCont.apellido);
+        fprintf(arch,"%s,", auxCont.apellido);
         fprintf(arch,"%s,", auxCont.nombre) ;
         fprintf(arch, "%d", auxCont.fechaNac.aaaa);
         fprintf(arch,"%d" , auxCont.fechaNac.mm) ;
@@ -101,7 +101,7 @@ void imprimirListaR(tNodo lista){
     }
 }
 
-void insertarEnListaOrdenado(tNodo* nodo, Content contenido, int nCampo, int asc){
+void insertarEnListaOrdenado(tNodo* nodo, tContent contenido, int nCampo, int asc){
     tNodo aux=NULL;
     
     if (*nodo == NULL){ /**INSERTO ULTIMO*/
