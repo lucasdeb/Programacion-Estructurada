@@ -67,7 +67,7 @@ void instertarEnListaOrdenado(d datos, t_nodo *lista){
         }
         else{
             instertarEnListaOrdenado(datos,&((*lista)->sig))
-        }
+        } 
         
     }
     
